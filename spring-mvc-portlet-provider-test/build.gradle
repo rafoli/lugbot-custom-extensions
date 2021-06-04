@@ -9,11 +9,27 @@ plugins {
 dependencies {
     testImplementation project(':spring-mvc-portlet-provider')
 
-    testImplementation "com.liferay.lugbot:com.liferay.code.upgrade.providers:1.0.0-SNAPSHOT"
-    testImplementation "com.liferay.lugbot:com.liferay.lugbot.api:1.0.0-SNAPSHOT"
+    testImplementation ("com.liferay.lugbot:com.liferay.code.upgrade.providers:1.0.0-SNAPSHOT") {
+        exclude group: 'com.liferay', module: 'com.liferay.markdown.parser'
+        exclude group: 'org.eclipse.p2.repo.orbit', module: 'org.apache.ant'
+        exclude group: 'org.eclipse.p2.repo.releases', module: 'com.google.guava'
+        exclude group: 'org.eclipse.p2.repo.releases', module: 'org.eclipse.core.resources'
+        exclude group: 'org.eclipse.p2.repo.releases', module: 'org.eclipse.equinox.common'
+        exclude group: 'org.eclipse.p2.repo.releases', module: 'org.eclipse.jdt.core'
+        exclude group: 'org.eclipse.p2.repo.releases', module: 'org.eclipse.jgit'
+        exclude group: 'org.eclipse.p2.repo.releases', module: 'org.eclipse.jst.jsp.core'
+        exclude group: 'org.eclipse.p2.repo.releases', module: 'org.eclipse.wst.sse.core'
+        exclude group: 'org.eclipse.p2.repo.releases', module: 'org.eclipse.wst.xml.core'
+        exclude group: 'org.gradle', module: 'gradle-tooling-api'
+    }
+    testImplementation ("com.liferay.lugbot:com.liferay.lugbot.api:1.0.0-SNAPSHOT") {
+        exclude group: 'org.eclipse.p2.repo.releases', module: 'org.eclipse.jgit'
+    }
 
     testImplementation "org.apache.commons:commons-compress:1.20"
+
     testImplementation "org.osgi:org.osgi.test.junit5:0.9.0"
+    testImplementation group: 'org.osgi', name: 'org.osgi.framework', version: '1.8.0'
 
 
     testRuntimeOnly "biz.aQute.bnd:aQute.libg:5.3.0"
@@ -59,6 +75,7 @@ dependencies {
 
     testRuntimeOnly group: 'org.osgi', name: 'org.osgi.util.pushstream', version: '1.0.1'
     testRuntimeOnly group: 'org.eclipse.birt.runtime.3_7_1', name: 'org.apache.xml.resolver', version: '1.2.0'
+    //testRuntimeOnly group: 'org.eclipse.jgit', name: 'org.eclipse.jgit', version: '5.11.0.202103091610-r'
 
 
 }

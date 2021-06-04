@@ -1,13 +1,32 @@
 import static org.gradle.api.JavaVersion.*
 
+
+plugins {
+    id 'nu.studer.credentials' version '2.1'
+}
+
+// Liferay nexus credentials
+String liferayNexusUsername = System.getenv("LIFERAY_NEXUS_USERNAME")
+String liferayNexusPassword = System.getenv("LIFERAY_NEXUS_PASSWORD")
+if (liferayNexusUsername == null || liferayNexusPassword == null) {
+    liferayNexusUsername = credentials.liferayNexusUsername
+    liferayNexusPassword = credentials.liferayNexusPassword
+}
+
 subprojects {
 
     group 'com.liferay.lugbot.providers.springmvcportlet'
     version = '1.0.0-SNAPSHOT'
 
     repositories {
-        mavenLocal()
         mavenCentral()
+        maven {
+            url 'https://repository.liferay.com/nexus/content/repositories/xanadu-snapshots/'
+            credentials {
+                username liferayNexusUsername
+                password liferayNexusPassword
+            }
+        }
     }
 
 
