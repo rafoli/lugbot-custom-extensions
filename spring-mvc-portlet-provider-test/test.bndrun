@@ -10,28 +10,28 @@
 -runbundles: \
 	biz.aQute.tester.junit-platform;version='[5.3.0,5.3.1)',\
 	com.google.guava;version='[27.1.0,27.1.1)',\
-	com.googlecode.javaewah.JavaEWAH;version='[1.1.9,1.1.10)',\
 	com.ibm.icu;version='[67.1.0,67.1.1)',\
 	com.liferay.code.upgrade.providers;version='[1.0.0,1.0.1)',\
 	com.liferay.lugbot.api;version='[1.0.0,1.0.1)',\
 	groovy;version='[2.5.9,2.5.10)',\
-	javax.annotation-api;version='[1.3.2,1.3.3)',\
-	javax.el-api;version='[2.2.5,2.2.6)',\
-	javax.servlet-api;version='[3.1.0,3.1.1)',\
-	javax.servlet.jsp-api;version='[2.2.1,2.2.2)',\
-	junit-jupiter-api;version='[5.7.1,5.7.2)',\
-	junit-jupiter-engine;version='[5.7.1,5.7.2)',\
-	junit-platform-commons;version='[1.7.1,1.7.2)',\
-	junit-platform-engine;version='[1.7.1,1.7.2)',\
-	junit-platform-launcher;version='[1.7.1,1.7.2)',\
-	lugbot-extensions-spring-mvc-portlet-provider;version='[1.0.0,1.0.1)',\
-	lugbot-extensions-spring-mvc-portlet-provider-test;version='[1.0.0,1.0.1)',\
+	javaewah;version='[1.1.7,1.1.8)',\
+	javax.annotation;version='[1.3.5,1.3.6)',\
+	javax.el;version='[2.2.0,2.2.1)',\
+	javax.servlet;version='[3.1.0,3.1.1)',\
+	javax.servlet.jsp;version='[2.2.0,2.2.1)',\
+	junit-jupiter-api;version='[5.6.2,5.6.3)',\
+	junit-jupiter-engine;version='[5.6.2,5.6.3)',\
+	junit-platform-commons;version='[1.6.2,1.6.3)',\
+	junit-platform-engine;version='[1.6.2,1.6.3)',\
+	junit-platform-launcher;version='[1.6.2,1.6.3)',\
+	lugbot-providers-springmvcportlet;version='[1.0.0,1.0.1)',\
+	lugbot-providers-springmvcportlet-test;version='[1.0.0,1.0.1)',\
 	org.apache.ant;version='[1.10.9,1.10.10)',\
 	org.apache.commons.commons-compress;version='[1.20.0,1.20.1)',\
 	org.apache.commons.configuration;version='[1.10.0,1.10.1)',\
 	org.apache.commons.lang;version='[2.6.0,2.6.1)',\
 	org.apache.commons.logging;version='[1.2.0,1.2.1)',\
-	org.apache.felix.scr;version='[2.1.20,2.1.21)',\
+	org.apache.felix.scr;version='[2.1.24,2.1.25)',\
 	org.apache.xerces;version='[2.12.1,2.12.2)',\
 	org.apache.xml.resolver;version='[1.2.0,1.2.1)',\
 	org.eclipse.core.commands;version='[3.9.800,3.9.801)',\
@@ -52,7 +52,7 @@
 	org.eclipse.jgit;version='[5.11.0,5.11.1)',\
 	org.eclipse.jst.jsp.core;version='[1.4.0,1.4.1)',\
 	org.eclipse.osgi.services;version='[3.10.0,3.10.1)',\
-	org.eclipse.osgi.util;version='[3.5.300,3.5.301)',\
+	org.eclipse.osgi.util;version='[3.6.0,3.6.1)',\
 	org.eclipse.text;version='[3.11.0,3.11.1)',\
 	org.eclipse.wst.common.core;version='[1.4.0,1.4.1)',\
 	org.eclipse.wst.common.environment;version='[1.0.401,1.0.402)',\
@@ -67,7 +67,8 @@
 	org.opentest4j;version='[1.2.0,1.2.1)',\
 	org.osgi.test.common;version='[0.9.0,0.9.1)',\
 	org.osgi.test.junit5;version='[0.9.0,0.9.1)',\
-	org.tukaani.xz;version='[1.9.0,1.9.1)'
+	org.tukaani.xz;version='[1.8.0,1.8.1)',\
+	org.yaml.snakeyaml;version='[1.28.0,1.28.1)'
 -runee: JavaSE-11
 -runfw: org.eclipse.osgi;version=3.15
 -runpath:\
@@ -82,8 +83,8 @@
 	tester.trace=true
 -runrequires: \
 	bnd.identity;id='biz.aQute.tester.junit-platform',\
-	bnd.identity;id='lugbot-extensions-spring-mvc-portlet-provider',\
-	bnd.identity;id='lugbot-extensions-spring-mvc-portlet-provider-test',\
+	bnd.identity;id='lugbot-providers-springmvcportlet',\
+	bnd.identity;id='lugbot-providers-springmvcportlet-test',\
 	bnd.identity;id='junit-jupiter-engine';version='5.6.2',\
 	bnd.identity;id='org.tukaani.xz'
 -runstartlevel: \

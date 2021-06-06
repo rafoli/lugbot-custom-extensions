@@ -1,4 +1,0 @@
-rootProject.name = 'LugBot Extensions - Spring MVC Portlet'
-
-include 'spring-mvc-portlet-provider'
-include 'spring-mvc-portlet-provider-test'

@@ -72,7 +72,7 @@ public class SpringMVCPortletMigradeCodeProvider implements UpgradeProvider {
 		});
 
 		try {
-			commitChanges(repoPath, "migrate spring-mvc code", Collections.singletonList("."));
+			//commitChanges(repoPath, "migrate spring-mvc code", Collections.singletonList("."));
 
 			return Optional.of(
 				new ProposalDTO(

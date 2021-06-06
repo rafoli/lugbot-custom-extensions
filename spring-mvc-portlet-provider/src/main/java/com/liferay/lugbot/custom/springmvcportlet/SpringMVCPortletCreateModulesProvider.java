@@ -66,7 +66,7 @@ public class SpringMVCPortletCreateModulesProvider implements UpgradeProvider {
 		});
 
 		try {
-			commitChanges(repoPath, "create spring-mvc modules", Collections.singletonList("."));
+			//commitChanges(repoPath, "create spring-mvc modules", Collections.singletonList("."));
 
 			return Optional.of(
 				new ProposalDTO(

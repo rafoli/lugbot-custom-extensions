@@ -179,7 +179,7 @@ public class SpringMVCPortletAutoCorrectBreakingChangesProvider implements Upgra
 						}
 					);
 
-					commitChanges(repoPath, "autocorrect breaking changes", Collections.singletonList("."));
+					//commitChanges(repoPath, "autocorrect breaking changes", Collections.singletonList("."));
 
 					return Optional.of(
 						new ProposalDTO(

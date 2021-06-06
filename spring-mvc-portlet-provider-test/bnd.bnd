@@ -1,3 +1,4 @@
-Bundle-SymbolicName: lugbot-extensions-spring-mvc-portlet-provider-test
+Bundle-Name: LugBot Extensions SpringMVCPortlet Provider Test
+Bundle-SymbolicName: lugbot-providers-springmvcportlet-test
 Test-Cases: \${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.annotation.Testable;CONCRETE}
 -noimportjava: true
