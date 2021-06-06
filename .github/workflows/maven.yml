@@ -21,8 +21,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Verify with Maven
-      uses: s4u/maven-settings-action@v2.4.0   
+    - uses: s4u/maven-settings-action@v2.4.0   
       with:
         servers: '[{"id": "xanaduSnapshots", "username": ${{ secrets.LIFERAY_NEXUS_USERNAME }}, "password": ${{ secrets.LIFERAY_NEXUS_PASSWORD }}}]'
+    - name: Verify with Maven
       run: mvn -B clean verify --file pom.xml
